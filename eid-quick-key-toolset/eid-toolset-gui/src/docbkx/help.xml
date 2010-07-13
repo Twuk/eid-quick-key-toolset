@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <book xml:id="simple_book" xmlns="http://docbook.org/ns/docbook" version="5.0">
+   <title>eID Quick Key Toolset GUI</title>
+   <article xml:id="general">
+     <title>About this application</title>
+	 <para>The eID Quick Key Toolset user interface enable users to manage Belgium eID cards and write modified and/or exact copies of these cards
+			on empty Java Cards. The copied cards will of course not be exact clones of the original cards as the private keys can not be copied.
+			This help page explains how this application can be used to efficiently manage your eID cards.</para>
+     <para>First, we explain how to read out eID cards (genuine or previously written copies) and how the data from the card is presented to the user. 
+			After that we show how the user can modify this data to his needs. A third part will deal with the storing and loading of read/modified card 
+			data on the user's computer and finally the last part handles the writing of this data to an empty Java Card.</para>
+   </article>
+   <chapter xml:id="reading">
+     <title>Reading out cards</title>
+     <para>At start-up the application will check the system for available card readers. These readers are then listed under the 'Readers' tab of the application and there will always be one reader selected by default. The user can change the reader to use by selecting it from the list. 
+	 Whenever readers are removed or new readers are added, the user should click on the refresh button under the same tab. Note that the readers show up in two lists. The first one selects the reader for reading out card and the second one selects the reader for writing to cards (this will be discussed later on), 
+	 thereby enabling both reading and writing cards at the same time.</para>
+	 <para>Once the correct reader is selected, the user can insert into that reader the eID card he wants to read out and go to the 'Actions' menu of the application and click on 'Read'.
+	 This will read out the card data. The user can then look up the card data displayed in the corresponding fields under the tabs 'Identity', 'Identity Extra' and 'Certificates'.
+	 Whenever a new card is read and the previously read data was not stored correctly, either on the system or on a empty card, this data will be lost (see next sections for storing/writing the card data).</para>
+	 <para>Finally, the remaining tab, namely 'Card and PIN', also contains some non modifiable card data and lets the user change or test the current PIN of the card connected to the selected reader.</para>
+   </chapter>
+   <chapter xml:id="modifying">
+     <title>Modifying card data</title>
+     <para>Once data has been read or loaded into the application, the user is able to change whatever data field he wants by just modifying the corresponding text field. Special fields like the photo or the certificates can also be changed.
+	 For cahnging the photo, the user has to click on it and select a new one from his file system. Note that it is up to the user to select a photo that is supported in the Belgian eID cards. To modify the certificates the user has to have the replacing 
+	 certificates in his files system. He can then just change the certificates by clicking on the 'Change Certificate' button when the certificate he wants to change is selected.</para>
+	 <para>As for the photo format, it is always up to the user to make sure that the modified data has a valid eID card format.</para>
+   </chapter>
+   <chapter xml:id="storing">
+     <title>Storing and loading card data</title>
+     <para>Once the necessary changes are made (or none), the user is able to store the (new) eID card data onto his system. By going to the 'File' menu and by selecting 'Save' het can choose a location and file name where to store the eID data. The data will be stored as an .xml file. 
+	 Furthermore, the user can load previously stored card data into the application by clicking 'Load' in the same menu and selecting the correct .xml file.</para>
+	 <para>The user is also able to store the certificates form a certain eID card in separate files so as to use them in other applications or change the certificates later on.
+	 To do this, he has to go to the 'Certificate' tab and click on the 'Save Certificate' button. The certificate will then be stored as an .crt file in the selected directory under the given name.</para>
+   </chapter>
+   <chapter xml:id="writing">
+     <title>Writing cards</title>
+     <para>The main functionality of the eID Quick Key Toolset is the ability to write empty eId cards with copies of genuine ones. To do this, first the eID Java Card applet has to be loaded onto a supported Java Card. As all Java Card smart cards have some manufacturer-specific 
+	 architectures, not all Java Cards are supported. Currently only two types of cards are supported and as the upload procedure for these cards is different the type has to be selected manually by the user. This can be done under the 'Readers' tab for both the Gemalto GemXpresso and the NXP SmartMX Java Card.
+	 Note that for the SmartMX cards, the ATR (answer to request) can and will not be changed.
+	 Once the user has selected a card type and a reader in which the card resides (under 'Current writer') he has to click on 'Write Empty' in the 'Actions' menu to start writing the empty eID applet to the card. Note that this can take a while as the whole application has to be send to the card through the slow smart card connection. 
+	 Note also that once the application has been installed, it does not have to be reinstalled for subsequent changes to that card unless the card has been activated and thus needs reinstalling (see next paragraph). The PIN of the newly installed applet will be 1234.</para>
+	 <para>Once the application is installed, the user can start writing the eID data to it. By clicking on 'Write' in the 'Actions' menu, the installed Java Card applet will be loaded with the data currently loaded into the GUI. Note that the GUI will first ask to upload the empty eID Java Card application. 
+	 This can be skipped if already done before (this is equivalent to the action described in the previous paragraph) and is only there to facilitate the global writing procedure. During this writing new authentication and non-repudiations keys will be initialized in the Java Card. The public part of these keys will automatically be stored inside 
+	 the corresponding certificates. Both these certificates can then be viewed as previously under the 'Certificates' tab. After succesful writing of the data, the user will be prompted to activate the card. This step is explained in the next paragraph.</para>
+	 <para>Activating the card, either when prompted during card writing or by clicking on 'Activate Card' in the 'Actions' menu will change the state of the card to read-only. Executing this step makes it impossible for the user (or any other person) to have further changes to the card. 
+	 The only way to undo this is by reinstalling the empty eID Java Card application on the card as explained in the first paragraph of this section.</para>
+   </chapter>
+ </book>

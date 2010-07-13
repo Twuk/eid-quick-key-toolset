@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/assembly-1.1.0-SNAPSHOT.xsd">
+	<formats>
+		<format>zip</format>
+		<format>tar.gz</format>
+	</formats>
+	<baseDirectory>eid-toolset-package</baseDirectory>
+	<files>
+		<file>
+			<source>src/main/assembly/README.txt</source>
+			<fileMode>0644</fileMode>
+		</file>
+		<file>
+			<source>../LICENSE.txt</source>
+			<fileMode>0644</fileMode>
+		</file>
+		<file>
+			<source>../eid-toolset-gui/target/docbkx/html/help.html</source>
+			<fileMode>0644</fileMode>
+		</file>
+		<file>
+			<source>target/eid-quick-key-toolset.exe</source>
+		</file>
+		<file>
+			<source>src/main/assembly/eid-quick-key-toolset.sh</source>
+			<fileMode>0544</fileMode>
+		</file>
+	</files>
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>lib</outputDirectory>
+			<excludes>
+				<exclude>be.fedict.eid-quick-key-toolset:eid-toolset-gui</exclude>
+			</excludes>
+		</dependencySet>
+		<dependencySet>
+			<includes>
+				<include>be.fedict.eid-quick-key-toolset:eid-toolset-gui</include>
+			</includes>
+		</dependencySet>
+	</dependencySets>
+</assembly>

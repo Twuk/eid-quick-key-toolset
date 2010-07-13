@@ -1,0 +1,218 @@
+// converted by version 1.0
+// on Thu Mar 07 15:56:32 PST 2002
+
+.package org/globalplatform {
+	.aid 0xA0:0x0:0x0:0x1:0x51:0x0;
+	.version 1.0;
+
+	.imports {
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x1 1.0;		//java/lang
+		0xA0:0x0:0x0:0x0:0x62:0x1:0x1 1.0;		//javacard/framework
+	}
+
+	.constantPool {
+		// 0
+		staticMethodRef 0.0.0()V;		// java/lang/Object.<init>()V
+	}
+
+	.interface public abstract Application 0 {
+
+		.shareable;
+
+		.superInterfaces {
+			1.2;		// javacard/framework/Shareable
+		}
+
+		.method public abstract processData([BSS)V 0 {
+		}
+
+	}
+
+	.interface public abstract CVM 1 {
+
+		.shareable;
+
+		.superInterfaces {
+			1.2;		// javacard/framework/Shareable
+		}
+
+		.fields {
+			public static final short CVM_SUCCESS = 0;		// S
+			public static final short CVM_FAILURE = -1;		// S
+			public static final byte FORMAT_ASCII = 1;		// B
+			public static final byte FORMAT_BCD = 2;		// B
+			public static final byte FORMAT_HEX = 3;		// B
+		}
+
+		.method public abstract isActive()Z 0 {
+		}
+
+		.method public abstract isSubmitted()Z 1 {
+		}
+
+		.method public abstract isVerified()Z 2 {
+		}
+
+		.method public abstract isBlocked()Z 3 {
+		}
+
+		.method public abstract getTriesRemaining()B 4 {
+		}
+
+		.method public abstract update([BSBB)Z 5 {
+		}
+
+		.method public abstract resetState()Z 6 {
+		}
+
+		.method public abstract blockState()Z 7 {
+		}
+
+		.method public abstract resetAndUnblockState()Z 8 {
+		}
+
+		.method public abstract setTryLimit(B)Z 9 {
+		}
+
+		.method public abstract verify([BSBB)S 10 {
+		}
+
+	}
+
+	.interface public abstract SecureChannel 2 {
+
+		.shareable;
+
+		.superInterfaces {
+			1.2;		// javacard/framework/Shareable
+		}
+
+		.fields {
+			public static final byte AUTHENTICATED = -128;		// B
+			public static final byte C_DECRYPTION = 2;		// B
+			public static final byte C_MAC = 1;		// B
+			public static final byte R_ENCRYPTION = 32;		// B
+			public static final byte R_MAC = 16;		// B
+			public static final byte NO_SECURITY_LEVEL = 0;		// B
+		}
+
+		.method public abstract processSecurity(Ljavacard/framework/APDU;)S 0 {
+		}
+
+		.method public abstract wrap([BSS)S 1 {
+		}
+
+		.method public abstract unwrap([BSS)S 2 {
+		}
+
+		.method public abstract decryptData([BSS)S 3 {
+		}
+
+		.method public abstract encryptData([BSS)S 4 {
+		}
+
+		.method public abstract resetSecurity()V 5 {
+		}
+
+		.method public abstract getSecurityLevel()B 6 {
+		}
+
+	}
+
+	.class public GPSystem 3 extends 0.0 {		// extends java/lang/Object
+
+		.fields {
+			public static final byte APPLICATION_INSTALLED = 3;		// B
+			public static final byte APPLICATION_SELECTABLE = 7;		// B
+			public static final byte SECURITY_DOMAIN_PERSONALIZED = 15;		// B
+			public static final byte CARD_OP_READY = 1;		// B
+			public static final byte CARD_INITIALIZED = 7;		// B
+			public static final byte CARD_SECURED = 15;		// B
+			public static final byte CARD_LOCKED = 127;		// B
+			public static final byte CARD_TERMINATED = -1;		// B
+			public static final byte CVM_GLOBAL_PIN = 17;		// B
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public <init>()V 0 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 0;		// java/lang/Object.<init>()V
+					return;
+		}
+
+		.method public static getCardContentState()B 1 {
+			.stack 1;
+			.locals 0;
+
+				L0:	sconst_0;
+					sreturn;
+		}
+
+		.method public static getCardState()B 2 {
+			.stack 1;
+			.locals 0;
+
+				L0:	sconst_0;
+					sreturn;
+		}
+
+		.method public static getCVM(B)Lorg/globalplatform/CVM; 3 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aconst_null;
+					areturn;
+		}
+
+		.method public static getSecureChannel()Lorg/globalplatform/SecureChannel; 4 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aconst_null;
+					areturn;
+		}
+
+		.method public static lockCard()Z 5 {
+			.stack 1;
+			.locals 0;
+
+				L0:	sconst_0;
+					sreturn;
+		}
+
+		.method public static terminateCard()Z 6 {
+			.stack 1;
+			.locals 0;
+
+				L0:	sconst_0;
+					sreturn;
+		}
+
+		.method public static setATRHistBytes([BSB)Z 7 {
+			.stack 1;
+			.locals 0;
+
+				L0:	sconst_0;
+					sreturn;
+		}
+
+		.method public static setCardContentState(B)Z 8 {
+			.stack 1;
+			.locals 0;
+
+				L0:	sconst_0;
+					sreturn;
+		}
+
+	}
+
+}

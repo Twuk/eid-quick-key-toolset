@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://fedict.be/eidtoolset/eidlibrary">
+  <xs:element name="MasterFile">
+	<xs:complexType>
+      <xs:sequence>
+		<xs:element name="dirFile">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="fileData" type="xs:base64Binary"/>
+				</xs:sequence>
+				<xs:attribute name="fileID" type="xs:base64Binary" fixed="2F00"/>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="BelPicDirectory">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="objectDirectoryFile">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="5031"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="tokenInfo">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="5032"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="authenticationObjectDirectoryFile">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="5034"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="privateKeyDirectoryFile">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="5035"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="certificateDirectoryFile">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="5037"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="authenticationCertificate">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="5038"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="nonRepudiationCertificate">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="5039"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="caCertificate">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="503A"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="rootCaCertificate">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="503B"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="rrnCertificate">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="503C"/>
+				</xs:complexType>
+			</xs:element>
+          </xs:sequence>
+		  <xs:attribute name="fileID" type="xs:base64Binary" fixed="DF00"/>
+        </xs:complexType>
+		</xs:element>
+		<xs:element name="IDDirectory">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="identityFile">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="4031"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="identityFileSignature">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="4032"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="addressFile">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="4033"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="addressFileSignature">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="4034"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="photoFile">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="4035"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="caRoleIDFile">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="4038"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="preferencesFile">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fileData" type="xs:base64Binary"/>
+					</xs:sequence>
+					<xs:attribute name="fileID" type="xs:base64Binary" fixed="4039"/>
+				</xs:complexType>
+			</xs:element>
+          </xs:sequence>
+		  <xs:attribute name="fileID" type="xs:base64Binary" fixed="DF01"/>
+        </xs:complexType>
+		</xs:element>
+	  </xs:sequence>
+      <xs:attribute name="fileID" type="xs:base64Binary" fixed="3F00"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+
+
+

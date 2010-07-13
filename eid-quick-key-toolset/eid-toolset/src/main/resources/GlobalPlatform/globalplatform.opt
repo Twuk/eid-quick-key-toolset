@@ -1,0 +1,5 @@
+-out JCA EXP
+-verbose
+-exportpath c:\jc21\api21
+org.globalplatform
+0xA0:0x00:0x00:0x01:0x51:0x00 1.0

@@ -1,0 +1,982 @@
+export file {		// org/globalplatform
+	magic	00FACADE		 // in hex
+	minor_version	1
+	major_version	2
+	constant_pool_count	91
+	constant_pool {
+		Constant_Utf8_info {
+			tag	1
+			length	11
+			bytes	processData
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	7
+			bytes	([BSS)V
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	30
+			bytes	org/globalplatform/Application
+		}
+		Constant_Classref_info {
+			tag	7
+			name_index	2		// org/globalplatform/Application
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	16
+			bytes	java/lang/Object
+		}
+		Constant_Classref_info {
+			tag	7
+			name_index	4		// java/lang/Object
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	28
+			bytes	javacard/framework/Shareable
+		}
+		Constant_Classref_info {
+			tag	7
+			name_index	6		// javacard/framework/Shareable
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	11
+			bytes	CVM_SUCCESS
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	1
+			bytes	S
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	13
+			bytes	ConstantValue
+		}
+		Constant_Integer_info {
+			tag	3
+			bytes	0
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	11
+			bytes	CVM_FAILURE
+		}
+		Constant_Integer_info {
+			tag	3
+			bytes	-1
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	12
+			bytes	FORMAT_ASCII
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	1
+			bytes	B
+		}
+		Constant_Integer_info {
+			tag	3
+			bytes	1
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	10
+			bytes	FORMAT_BCD
+		}
+		Constant_Integer_info {
+			tag	3
+			bytes	2
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	10
+			bytes	FORMAT_HEX
+		}
+		Constant_Integer_info {
+			tag	3
+			bytes	3
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	8
+			bytes	isActive
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	3
+			bytes	()Z
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	11
+			bytes	isSubmitted
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	10
+			bytes	isVerified
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	9
+			bytes	isBlocked
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	17
+			bytes	getTriesRemaining
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	3
+			bytes	()B
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	6
+			bytes	update
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	8
+			bytes	([BSBB)Z
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	10
+			bytes	resetState
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	10
+			bytes	blockState
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	20
+			bytes	resetAndUnblockState
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	11
+			bytes	setTryLimit
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	4
+			bytes	(B)Z
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	6
+			bytes	verify
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	8
+			bytes	([BSBB)S
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	22
+			bytes	org/globalplatform/CVM
+		}
+		Constant_Classref_info {
+			tag	7
+			name_index	37		// org/globalplatform/CVM
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	13
+			bytes	AUTHENTICATED
+		}
+		Constant_Integer_info {
+			tag	3
+			bytes	-128
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	12
+			bytes	C_DECRYPTION
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	5
+			bytes	C_MAC
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	12
+			bytes	R_ENCRYPTION
+		}
+		Constant_Integer_info {
+			tag	3
+			bytes	32
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	5
+			bytes	R_MAC
+		}
+		Constant_Integer_info {
+			tag	3
+			bytes	16
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	17
+			bytes	NO_SECURITY_LEVEL
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	15
+			bytes	processSecurity
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	28
+			bytes	(Ljavacard/framework/APDU;)S
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	4
+			bytes	wrap
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	7
+			bytes	([BSS)S
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	6
+			bytes	unwrap
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	11
+			bytes	decryptData
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	11
+			bytes	encryptData
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	13
+			bytes	resetSecurity
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	3
+			bytes	()V
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	16
+			bytes	getSecurityLevel
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	32
+			bytes	org/globalplatform/SecureChannel
+		}
+		Constant_Classref_info {
+			tag	7
+			name_index	58		// org/globalplatform/SecureChannel
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	21
+			bytes	APPLICATION_INSTALLED
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	22
+			bytes	APPLICATION_SELECTABLE
+		}
+		Constant_Integer_info {
+			tag	3
+			bytes	7
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	28
+			bytes	SECURITY_DOMAIN_PERSONALIZED
+		}
+		Constant_Integer_info {
+			tag	3
+			bytes	15
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	13
+			bytes	CARD_OP_READY
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	16
+			bytes	CARD_INITIALIZED
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	12
+			bytes	CARD_SECURED
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	11
+			bytes	CARD_LOCKED
+		}
+		Constant_Integer_info {
+			tag	3
+			bytes	127
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	15
+			bytes	CARD_TERMINATED
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	14
+			bytes	CVM_GLOBAL_PIN
+		}
+		Constant_Integer_info {
+			tag	3
+			bytes	17
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	6
+			bytes	<init>
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	19
+			bytes	getCardContentState
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	12
+			bytes	getCardState
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	6
+			bytes	getCVM
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	27
+			bytes	(B)Lorg/globalplatform/CVM;
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	16
+			bytes	getSecureChannel
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	36
+			bytes	()Lorg/globalplatform/SecureChannel;
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	8
+			bytes	lockCard
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	13
+			bytes	terminateCard
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	15
+			bytes	setATRHistBytes
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	7
+			bytes	([BSB)Z
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	19
+			bytes	setCardContentState
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	6
+			bytes	equals
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	21
+			bytes	(Ljava/lang/Object;)Z
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	27
+			bytes	org/globalplatform/GPSystem
+		}
+		Constant_Classref_info {
+			tag	7
+			name_index	87		// org/globalplatform/GPSystem
+		}
+		Constant_Utf8_info {
+			tag	1
+			length	18
+			bytes	org/globalplatform
+		}
+		CONSTANT_Package_info {
+			tag	13
+			flags	1
+			name_index	89		// org/globalplatform
+			minor_version	0
+			major_version	1
+			aid_length	6
+			aid	0xA0:0x00:0x00:0x01:051:0x00
+		}
+	}
+	this_package	90
+	export_class_count	4
+	export_classes {
+		class_info {		// org/globalplatform/Application
+			token	0
+			access_flags	public abstract interface shareable
+			name_index	3		// org/globalplatform/Application
+			export_supers_count	1
+			supers {
+				constant_pool_index	5		// java/lang/Object
+			}
+			export_interfaces_count	1
+			interfaces {
+				constant_pool_index	7		// javacard/framework/Shareable
+			}
+			export_fields_count	0
+			fields {
+			}
+			export_methods_count	1
+			methods {
+				method_info {
+					token	0
+					access_flags	public abstract
+					name_index	0		// processData
+					Descriptor_Index	1		// ([BSS)V
+				}
+			}
+		}
+		class_info {		// org/globalplatform/CVM
+			token	1
+			access_flags	public abstract interface shareable
+			name_index	38		// org/globalplatform/CVM
+			export_supers_count	1
+			supers {
+				constant_pool_index	5		// java/lang/Object
+			}
+			export_interfaces_count	1
+			interfaces {
+				constant_pool_index	7		// javacard/framework/Shareable
+			}
+			export_fields_count	5
+			fields {
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	8		// CVM_SUCCESS
+				Descriptor_Index	9		// S
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	11		// value = 0
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	12		// CVM_FAILURE
+				Descriptor_Index	9		// S
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	13		// value = -1
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	14		// FORMAT_ASCII
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	16		// value = 1
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	17		// FORMAT_BCD
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	18		// value = 2
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	19		// FORMAT_HEX
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	20		// value = 3
+				}
+				}
+			}
+			}
+			export_methods_count	11
+			methods {
+				method_info {
+					token	0
+					access_flags	public abstract
+					name_index	21		// isActive
+					Descriptor_Index	22		// ()Z
+				}
+				method_info {
+					token	1
+					access_flags	public abstract
+					name_index	23		// isSubmitted
+					Descriptor_Index	22		// ()Z
+				}
+				method_info {
+					token	2
+					access_flags	public abstract
+					name_index	24		// isVerified
+					Descriptor_Index	22		// ()Z
+				}
+				method_info {
+					token	3
+					access_flags	public abstract
+					name_index	25		// isBlocked
+					Descriptor_Index	22		// ()Z
+				}
+				method_info {
+					token	4
+					access_flags	public abstract
+					name_index	26		// getTriesRemaining
+					Descriptor_Index	27		// ()B
+				}
+				method_info {
+					token	5
+					access_flags	public abstract
+					name_index	28		// update
+					Descriptor_Index	29		// ([BSBB)Z
+				}
+				method_info {
+					token	6
+					access_flags	public abstract
+					name_index	30		// resetState
+					Descriptor_Index	22		// ()Z
+				}
+				method_info {
+					token	7
+					access_flags	public abstract
+					name_index	31		// blockState
+					Descriptor_Index	22		// ()Z
+				}
+				method_info {
+					token	8
+					access_flags	public abstract
+					name_index	32		// resetAndUnblockState
+					Descriptor_Index	22		// ()Z
+				}
+				method_info {
+					token	9
+					access_flags	public abstract
+					name_index	33		// setTryLimit
+					Descriptor_Index	34		// (B)Z
+				}
+				method_info {
+					token	10
+					access_flags	public abstract
+					name_index	35		// verify
+					Descriptor_Index	36		// ([BSBB)S
+				}
+			}
+		}
+		class_info {		// org/globalplatform/SecureChannel
+			token	2
+			access_flags	public abstract interface shareable
+			name_index	59		// org/globalplatform/SecureChannel
+			export_supers_count	1
+			supers {
+				constant_pool_index	5		// java/lang/Object
+			}
+			export_interfaces_count	1
+			interfaces {
+				constant_pool_index	7		// javacard/framework/Shareable
+			}
+			export_fields_count	6
+			fields {
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	39		// AUTHENTICATED
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	40		// value = -128
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	41		// C_DECRYPTION
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	18		// value = 2
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	42		// C_MAC
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	16		// value = 1
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	43		// R_ENCRYPTION
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	44		// value = 32
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	45		// R_MAC
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	46		// value = 16
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	47		// NO_SECURITY_LEVEL
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	11		// value = 0
+				}
+				}
+			}
+			}
+			export_methods_count	7
+			methods {
+				method_info {
+					token	0
+					access_flags	public abstract
+					name_index	48		// processSecurity
+					Descriptor_Index	49		// (Ljavacard/framework/APDU;)S
+				}
+				method_info {
+					token	1
+					access_flags	public abstract
+					name_index	50		// wrap
+					Descriptor_Index	51		// ([BSS)S
+				}
+				method_info {
+					token	2
+					access_flags	public abstract
+					name_index	52		// unwrap
+					Descriptor_Index	51		// ([BSS)S
+				}
+				method_info {
+					token	3
+					access_flags	public abstract
+					name_index	53		// decryptData
+					Descriptor_Index	51		// ([BSS)S
+				}
+				method_info {
+					token	4
+					access_flags	public abstract
+					name_index	54		// encryptData
+					Descriptor_Index	51		// ([BSS)S
+				}
+				method_info {
+					token	5
+					access_flags	public abstract
+					name_index	55		// resetSecurity
+					Descriptor_Index	56		// ()V
+				}
+				method_info {
+					token	6
+					access_flags	public abstract
+					name_index	57		// getSecurityLevel
+					Descriptor_Index	27		// ()B
+				}
+			}
+		}
+		class_info {		// org/globalplatform/GPSystem
+			token	3
+			access_flags	public
+			name_index	88		// org/globalplatform/GPSystem
+			export_supers_count	1
+			supers {
+				constant_pool_index	5		// java/lang/Object
+			}
+			export_interfaces_count	0
+			interfaces {
+			}
+			export_fields_count	9
+			fields {
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	60		// APPLICATION_INSTALLED
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	20		// value = 3
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	61		// APPLICATION_SELECTABLE
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	62		// value = 7
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	63		// SECURITY_DOMAIN_PERSONALIZED
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	64		// value = 15
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	65		// CARD_OP_READY
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	16		// value = 1
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	66		// CARD_INITIALIZED
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	62		// value = 7
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	67		// CARD_SECURED
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	64		// value = 15
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	68		// CARD_LOCKED
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	69		// value = 127
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	70		// CARD_TERMINATED
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	13		// value = -1
+				}
+				}
+			}
+			field_info {
+				token	255
+				access_flags	public static final
+				name_index	71		// CVM_GLOBAL_PIN
+				Descriptor_Index	15		// B
+				attributes_count	1
+				attributes {
+				ConstantValue_attribute {
+					attribute_name_index	10		// ConstantValue
+					attribute_length	2
+					constantvalue_index	72		// value = 17
+				}
+				}
+			}
+			}
+			export_methods_count	10
+			methods {
+				method_info {
+					token	0
+					access_flags	public
+					name_index	73		// <init>
+					Descriptor_Index	56		// ()V
+				}
+				method_info {
+					token	1
+					access_flags	public static
+					name_index	74		// getCardContentState
+					Descriptor_Index	27		// ()B
+				}
+				method_info {
+					token	2
+					access_flags	public static
+					name_index	75		// getCardState
+					Descriptor_Index	27		// ()B
+				}
+				method_info {
+					token	3
+					access_flags	public static
+					name_index	76		// getCVM
+					Descriptor_Index	77		// (B)Lorg/globalplatform/CVM;
+				}
+				method_info {
+					token	4
+					access_flags	public static
+					name_index	78		// getSecureChannel
+					Descriptor_Index	79		// ()Lorg/globalplatform/SecureChannel;
+				}
+				method_info {
+					token	5
+					access_flags	public static
+					name_index	80		// lockCard
+					Descriptor_Index	22		// ()Z
+				}
+				method_info {
+					token	6
+					access_flags	public static
+					name_index	81		// terminateCard
+					Descriptor_Index	22		// ()Z
+				}
+				method_info {
+					token	7
+					access_flags	public static
+					name_index	82		// setATRHistBytes
+					Descriptor_Index	83		// ([BSB)Z
+				}
+				method_info {
+					token	8
+					access_flags	public static
+					name_index	84		// setCardContentState
+					Descriptor_Index	34		// (B)Z
+				}
+				method_info {
+					token	0
+					access_flags	public
+					name_index	85		// equals
+					Descriptor_Index	86		// (Ljava/lang/Object;)Z
+				}
+			}
+		}
+	}
+}
