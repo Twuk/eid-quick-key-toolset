@@ -7,7 +7,7 @@ select -AID a000000003000000
 open_sc -security 3 -keyver 42 -mac_key 404142434445464748494A4B4C4D4E4F -enc_key 404142434445464748494A4B4C4D4E4F -kek_key 404142434445464748494A4B4C4D4E4F
 delete -AID A000000177504B43532D3135
 delete -AID A000000177504B43532D31
-install -file be/fedict/eidapplet/javacard/eidapplet.cap -priv 2
+install -file be/fedict/eidapplet/javacard/eidapplet.cap -priv 4
 card_disconnect
 release_context
 
