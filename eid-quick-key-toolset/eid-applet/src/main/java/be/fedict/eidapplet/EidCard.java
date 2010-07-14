@@ -1167,23 +1167,25 @@ public class EidCard extends javacard.framework.Applet {
 		// if file identifier is the master file, select it immediately
 		if (fid == MF)
 			selectedFile = masterFile;
-		// if the current selected file is an DF
-		else if (selectedFile instanceof DedicatedFile) {
-			// check if the requested file exists under the current DF
-			File s = ((DedicatedFile) selectedFile).getSibling(fid);
-			if (s == null)
-				ISOException.throwIt(ISO7816.SW_FILE_NOT_FOUND);
-			selectedFile = s;
-		}
-		// otherwise the currently selected file is an EF
+		
 		else {
-			// check if the requested file exist under the current DF;
-			// the current DF is the parent of the current selected EF
-			DedicatedFile p = ((ElementaryFile) selectedFile).getParent();
-			File s = p.getSibling(fid);
-			if (s == null)
-				ISOException.throwIt(ISO7816.SW_FILE_NOT_FOUND);
-			selectedFile = p.getSibling(fid);
+			// check if the requested file exists under the current DF
+			File s = ((DedicatedFile) masterFile).getSibling(fid);
+			if (s != null)
+				selectedFile = s;
+			//the fid is an elementary file:
+			else {
+				s = belpicDirectory.getSibling(fid);
+				if (s != null)
+					selectedFile = s;
+				else {
+					s = idDirectory.getSibling(fid);
+					if (s != null)
+						selectedFile = s;
+					else ISOException.throwIt(ISO7816.SW_FILE_NOT_FOUND);
+				}
+				
+			}
 		}
 	}
 	/**
