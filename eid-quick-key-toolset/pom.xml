@@ -24,10 +24,15 @@
         <name>Gauthier Van Damme</name>
         <email>Gauthier.VanDamme@esat.kuleuven.be</email>
       </developer>
-	  <developer>
+	<developer>
         <id>decockd</id>
         <name>Danny De Cock</name>
         <email>Danny.DeCock@esat.kuleuven.be</email>
+      </developer>
+	<developer>
+        <id>dschelle</id>
+        <name>Dries Schellekens</name>
+        <email>Dries.Schellekens@esat.kuleuven.be</email>
       </developer>
   </developers>
   <packaging>pom</packaging>

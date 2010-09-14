@@ -20,7 +20,7 @@ upload the empty eID applet to a smart card.
 === 2. Requirements
 
 The following is required for compiling the eID Applet and Engine software:
-* Sun Java 1.6.0_16+
+* Sun Java Development Kit (JDK) 1.6.0_16+
 * Apache Maven 2.0.10/2.2.1
 
 For running the compiled code under Unix/Mac OS systems, GPShell 1.4.2+ should be 
