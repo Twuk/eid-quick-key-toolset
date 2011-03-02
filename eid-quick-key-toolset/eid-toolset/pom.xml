@@ -58,9 +58,6 @@
 				</goals>
 			</execution>
 		</executions>
-		<configuration>
-			<generateDirectory>src/main/java</generateDirectory>
-		</configuration>
 	</plugin>
 	<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
