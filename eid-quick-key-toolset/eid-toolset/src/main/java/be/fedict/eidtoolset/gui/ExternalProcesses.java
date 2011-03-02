@@ -86,6 +86,10 @@ public class ExternalProcesses {
 			optfile = "EmptyEidCardWindows.opt";
 		} else {
 			converter = "java_card_kit-2_2_1" + File.separator + "bin" + File.separator + "converter";
+                        ProcessBuilder chmodProcessBuilder = new ProcessBuilder("chmod", "+x", converter);
+                        chmodProcessBuilder.redirectErrorStream(true);
+                        Process chmodProcess = chmodProcessBuilder.start();
+                        chmodProcess.waitFor();
 			optfile = "EmptyEidCardLinux.opt";
 		}
 		ProcessBuilder pb2 = new ProcessBuilder(converter, config, optfile);
