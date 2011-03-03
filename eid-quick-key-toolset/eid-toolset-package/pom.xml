@@ -1,90 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>eid-quick-key-toolset</artifactId>
-    <groupId>be.fedict</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
-  <groupId>be.fedict.eid-quick-key-toolset</groupId>
-  <artifactId>eid-toolset-package</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>eid-toolset-package</name>
-  <build>
-  <plugins>
-	<plugin>
-       <groupId>org.apache.maven.plugins</groupId>
-       <artifactId>maven-dependency-plugin</artifactId>
-       <executions>
-		<execution>
-           <phase>process-resources</phase>
-           <goals>
-              <goal>copy-dependencies</goal>
-           </goals>
-        </execution>
-       </executions>
-    </plugin>
-	<plugin>
-        <groupId>org.bluestemsoftware.open.maven.plugin</groupId>
-        <artifactId>launch4j-plugin</artifactId>
-		<version>1.5.0.0</version>
-        <executions>
-            <execution>
-                <phase>compile</phase>
-                <goals>
-                    <goal>launch4j</goal>
-                </goals>
-                <configuration>
-                    <headerType>gui</headerType>
-                    <jre>
-                        <minVersion>1.6.0</minVersion>
-                    </jre>
-					<jar>target/dependency/eid-toolset-gui-1.0-SNAPSHOT.jar</jar>
-                    <dontWrapJar>false</dontWrapJar>
-                    <outfile>target/eid-quick-key-toolset.exe</outfile>
-                    <versionInfo>
-                        <fileVersion>1.0.0.0</fileVersion>
-                        <txtFileVersion>eID Quick-Key Toolset v1.0.0.0</txtFileVersion>
-                        <fileDescription>eID Quick-Key Toolset</fileDescription>
-                        <copyright>Copyright (C) 2010 COSIC</copyright>
-                        <productVersion>1.0.0.0</productVersion>
-                        <txtProductVersion>eID Quick-Key Toolset v1.0.0.0</txtProductVersion>
-                        <productName>eID Quick-Key Toolset</productName>
-                        <internalName>eid-quick-key-toolset</internalName>
-                        <originalFilename>eid-quick-key-toolset.exe</originalFilename>
-                    </versionInfo>
-                </configuration>
-            </execution>
-        </executions>
-    </plugin>
-	<plugin>
-         <groupId>org.apache.maven.plugins</groupId>
-         <artifactId>maven-assembly-plugin</artifactId>
-         <configuration>
-            <descriptors>
-                <descriptor>src/main/assembly/package.xml</descriptor>
-            </descriptors>
-         </configuration>
-         <executions>
-            <execution>
-                <id>package</id>
-                <phase>package</phase>
-                <goals>
-                    <goal>attached</goal>
-                </goals>
-            </execution>
-         </executions>
-    </plugin>
-  </plugins>
-  </build>
-  <dependencies>
-    <dependency>
-      <groupId>be.fedict.eid-quick-key-toolset</groupId>
-      <artifactId>eid-toolset-gui</artifactId>
-      <version>1.0-SNAPSHOT</version>
-	  <scope>compile</scope>
-    </dependency>
-  </dependencies>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>eid-quick-key-toolset</artifactId>
+		<groupId>be.fedict</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<groupId>be.fedict.eid-quick-key-toolset</groupId>
+	<artifactId>eid-toolset-package</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>eID Toolset Package</name>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.bluestemsoftware.open.maven.plugin</groupId>
+				<artifactId>launch4j-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>launch4j</goal>
+						</goals>
+						<configuration>
+							<headerType>gui</headerType>
+							<jre>
+								<minVersion>1.6.0</minVersion>
+							</jre>
+							<jar>target/dependency/eid-toolset-gui-1.0-SNAPSHOT.jar</jar>
+							<dontWrapJar>false</dontWrapJar>
+							<outfile>target/eid-quick-key-toolset.exe</outfile>
+							<versionInfo>
+								<fileVersion>1.0.0.0</fileVersion>
+								<txtFileVersion>eID Quick-Key Toolset v1.0.0.0</txtFileVersion>
+								<fileDescription>eID Quick-Key Toolset</fileDescription>
+								<copyright>Copyright (C) 2010 COSIC</copyright>
+								<productVersion>1.0.0.0</productVersion>
+								<txtProductVersion>eID Quick-Key Toolset v1.0.0.0</txtProductVersion>
+								<productName>eID Quick-Key Toolset</productName>
+								<internalName>eid-quick-key-toolset</internalName>
+								<originalFilename>eid-quick-key-toolset.exe</originalFilename>
+							</versionInfo>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>src/main/assembly/package.xml</descriptor>
+					</descriptors>
+					<appendAssemblyId>false</appendAssemblyId>
+				</configuration>
+				<executions>
+					<execution>
+						<id>package</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>be.fedict.eid-quick-key-toolset</groupId>
+			<artifactId>eid-toolset-gui</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
 </project>

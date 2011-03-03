@@ -1,70 +1,110 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>be.fedict</groupId>
-  <version>1.0-SNAPSHOT</version>
-  <artifactId>eid-quick-key-toolset</artifactId>
-  <name>FedICT Quick-Key Toolset Project</name>
-  <licenses>
-    <license>
-        <name>GNU LESSER GENERAL PUBLIC LICENSE, Version 3</name>
-        <url>LICENSE.txt</url>
-    </license>
-  </licenses>
-  <organization>
-    <name>FedICT</name>
-    <url>http://www.fedict.belgium.be/</url>
-  </organization>
-  <url>http://code.google.com/p/eid-quick-key-toolset/</url>
-  <developers>
-      <developer>
-        <id>gvandamm</id>
-        <name>Gauthier Van Damme</name>
-        <email>Gauthier.VanDamme@esat.kuleuven.be</email>
-      </developer>
-	<developer>
-        <id>decockd</id>
-        <name>Danny De Cock</name>
-        <email>Danny.DeCock@esat.kuleuven.be</email>
-      </developer>
-	<developer>
-        <id>dschelle</id>
-        <name>Dries Schellekens</name>
-        <email>Dries.Schellekens@esat.kuleuven.be</email>
-      </developer>
-  </developers>
-  <packaging>pom</packaging>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-  <modules>
-	<module>eid-applet</module>
-    <module>eid-toolset</module>
-	<module>eid-toolset-gui</module>
-	<module>eid-toolset-package</module>
-  </modules>
-  <reporting>
-		<plugins>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>be.fedict</groupId>
+	<artifactId>eid-quick-key-toolset</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>FedICT Quick-Key Toolset Project</name>
+	<licenses>
+		<license>
+			<name>GNU LESSER GENERAL PUBLIC LICENSE, Version 3</name>
+			<url>LICENSE.txt</url>
+		</license>
+	</licenses>
+	<organization>
+		<name>FedICT</name>
+		<url>http://www.fedict.belgium.be/</url>
+	</organization>
+	<url>http://code.google.com/p/eid-quick-key-toolset/</url>
+	<developers>
+		<developer>
+			<id>gvandamm</id>
+			<name>Gauthier Van Damme</name>
+			<email>Gauthier.VanDamme@esat.kuleuven.be</email>
+		</developer>
+		<developer>
+			<id>decockd</id>
+			<name>Danny De Cock</name>
+			<email>Danny.DeCock@esat.kuleuven.be</email>
+		</developer>
+		<developer>
+			<id>dschelle</id>
+			<name>Dries Schellekens</name>
+			<email>Dries.Schellekens@esat.kuleuven.be</email>
+		</developer>
+	</developers>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<modules>
+		<module>eid-applet</module>
+		<module>eid-toolset</module>
+		<module>eid-toolset-gui</module>
+		<module>eid-toolset-package</module>
+	</modules>
+	<build>
+		<pluginManagement>
+			<plugins>
 				<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-javadoc-plugin</artifactId>
-						<version>2.7</version>
-						<configuration>
-								<links>
-										<link>http://java.sun.com/javase/6/docs/api/</link>
-										<link>http://java.sun.com/javaee/5/docs/api/</link>
-								</links>
-						</configuration>
-						<reportSets>
-                                        <reportSet>
-                                                <reports>
-                                                        <report>javadoc</report>
-                                                </reports>
-                                        </reportSet>
-                        </reportSets>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.3.2</version>
 				</plugin>
-		</plugins>
-  </reporting>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.3.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.jvnet.jaxb2.maven2</groupId>
+					<artifactId>maven-jaxb2-plugin</artifactId>
+					<version>0.7.5</version>
+				</plugin>
+				<plugin>
+					<groupId>com.agilejava.docbkx</groupId>
+					<artifactId>docbkx-maven-plugin</artifactId>
+					<version>2.0.11</version>
+					<dependencies>
+						<dependency>
+							<groupId>org.docbook</groupId>
+							<artifactId>docbook-xml</artifactId>
+							<version>4.4</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>2.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.bluestemsoftware.open.maven.plugin</groupId>
+					<artifactId>launch4j-plugin</artifactId>
+					<version>1.5.0.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>2.2</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	<repositories>
+		<repository>
+			<id>maven2-repository.dev.java.net</id>
+			<name>Java.net Maven 2 Repository</name>
+			<url>http://download.java.net/maven/2</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>maven2-repository.dev.java.net</id>
+			<name>Java.net Maven 2 Repository</name>
+			<url>http://download.java.net/maven/2</url>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
