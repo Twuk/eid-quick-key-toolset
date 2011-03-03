@@ -25,7 +25,8 @@
 					<target>1.1</target>
 					<source>1.3</source>
 					<compilerArguments>
-						<bootclasspath>j2sdk1.4.1_07/jre/lib/rt.jar${path.separator}src/main/resources/java_card_kit-2_2_1/lib/javacardframework.jar${path.separator}src/main/resources/java_card_kit-2_2_1/lib/api.jar</bootclasspath>
+						<bootclasspath>j2sdk1.4.1_07/jre/lib/rt.jar</bootclasspath>
+						<classpath>src/main/resources/java_card_kit-2_2_1/lib/javacardframework.jar${path.separator}src/main/resources/java_card_kit-2_2_1/lib/api.jar</classpath>
 					</compilerArguments>
 				</configuration>
 			</plugin>
