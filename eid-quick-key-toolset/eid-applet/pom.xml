@@ -38,9 +38,40 @@
 					</archive>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>be.fedict.eid-quick-key-toolset</groupId>
+				<artifactId>javacard-converter-plugin</artifactId>
+				<version>${project.version}</version>
+				<executions>
+					<execution>
+						<id>convert</id>
+						<phase>package</phase>
+						<goals>
+							<goal>convert</goal>
+						</goals>
+						<configuration>
+							<packageName>be.fedict.eidapplet</packageName>
+							<packageAid>0xA0:0x00:0x00:0x01:0x77:0x50:0x4B:0x43:0x53:0x2D:0x31</packageAid>
+							<version>1.0</version>
+							<appletAid>0xA0:0x00:0x00:0x01:0x77:0x50:0x4B:0x43:0x53:0x2D:0x31:0x35</appletAid>
+							<appletClass>be.fedict.eidapplet.EmptyEidCard</appletClass>
+							<exports>
+								<export>src/main/resources/java_card_kit-2_2_1/api_export_files/</export>
+								<export>src/main/GlobalPlatform</export>
+							</exports>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
+		<dependency>
+			<groupId>be.fedict.eid-quick-key-toolset</groupId>
+			<artifactId>javacard-converter-plugin</artifactId>
+			<version>${project.version}</version>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
 			<groupId>javacard</groupId>
 			<artifactId>javacardframework</artifactId>

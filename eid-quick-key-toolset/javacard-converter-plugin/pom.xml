@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>be.fedict.eid-quick-key-toolset</groupId>
+	<artifactId>javacard-converter-plugin</artifactId>
+	<packaging>maven-plugin</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>JavaCard Converter Plugin</name>
+	<parent>
+		<groupId>be.fedict</groupId>
+		<artifactId>eid-quick-key-toolset</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-plugin-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javacard</groupId>
+			<artifactId>converter</artifactId>
+			<version>2.2.1</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/../eid-applet/src/main/resources/java_card_kit-2_2_1/lib/converter.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>javacard</groupId>
+			<artifactId>offcardverifier</artifactId>
+			<version>2.2.1</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/../eid-applet/src/main/resources/java_card_kit-2_2_1/lib/offcardverifier.jar</systemPath>
+		</dependency>
+	</dependencies>
+</project>
