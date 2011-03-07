@@ -20,6 +20,7 @@ package be.fedict.eidtoolset.gui;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -29,9 +30,21 @@ import javax.swing.JOptionPane;
 import be.fedict.util.FileUtils;
 
 public class ExternalProcesses {
+	
+	private static class JARFilenameFilter implements FilenameFilter {
+		@Override
+		public boolean accept(File dir, String name) {
+			if (name.endsWith(".jar")) {
+				return true;
+			}
+			return false;
+		}
+	}
+	
 	public static void extractJarFiles() throws Exception {
 		File lib = new File("lib" + File.separator);
-		File[] jars = lib.listFiles();
+		File[] jars = lib.listFiles(new JARFilenameFilter());
+		System.out.println("Extracting: " + jars[0].getAbsolutePath());
 		ProcessBuilder pb1 = new ProcessBuilder("jar", "xf", jars[0].getAbsolutePath());
 		pb1.redirectErrorStream(true);
 		Process p1 = pb1.start();
@@ -54,24 +67,6 @@ public class ExternalProcesses {
 		// You must close the streams, even if you never use them! In this case
 		// the threads close is and os.
 		p1.getErrorStream().close();
-		ProcessBuilder pb2 = new ProcessBuilder("jar", "xf", jars[1].getAbsolutePath());
-		pb2.redirectErrorStream(true);
-		Process p2 = pb2.start();
-		OutputStream os2 = p2.getOutputStream();
-		InputStream is2 = p2.getInputStream();
-		// spawn two threads to handle I/O with child while we wait for it to
-		// complete.
-		new Thread(new Receiver(is2)).start();
-		new Thread(new Sender(os2)).start();
-		try {
-			p2.waitFor();
-		} catch (InterruptedException e) {
-			Thread.currentThread().interrupt();
-		} catch (Exception e) {
-			throw new Exception();
-		}
-		System.out.println("Second jar file extraction done");
-		p2.getErrorStream().close();
 	}
 	// makes java card produce .cap file in right directory
 	// We assume both java card 2.2.1 and class files are in the resource
