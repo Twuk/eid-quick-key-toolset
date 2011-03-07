@@ -1551,7 +1551,7 @@ class ExtractAndConvert extends Thread {
 			// Extract the jar files
 			ExternalProcesses.extractJarFiles();
 			// Convert the empty eid class file to a .cap file.
-			ExternalProcesses.runJavaCardConverter();
+			//ExternalProcesses.runJavaCardConverter();
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "Error during jar extraction and .cap conversion: " + e, "Error", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();

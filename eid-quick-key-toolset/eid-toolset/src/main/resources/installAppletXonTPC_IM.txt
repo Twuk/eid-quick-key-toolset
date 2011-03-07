@@ -9,7 +9,7 @@ open_sc -security 0 -keyind 0 -keyver 0 -key 47454d5850524553534f53414d504c45
 send_apdu -sc 0 -APDU 800E000016031296803B9813400AA503010101AD1311A983009000
 delete -AID A000000177504B43532D3135
 delete -AID A000000177504B43532D31
-install -file be/fedict/eidapplet/javacard/eidapplet.cap -priv 4
+install -file lib/eid-applet-1.0-SNAPSHOT.cap -priv 4
 card_disconnect
 release_context
 
