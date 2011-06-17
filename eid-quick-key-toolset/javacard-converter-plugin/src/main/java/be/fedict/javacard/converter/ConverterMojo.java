@@ -113,7 +113,7 @@ public class ConverterMojo extends AbstractMojo {
 		String exportPath = "";
 		for (String export : this.exports) {
 			File exportFile = new File(this.basedir, export);
-			exportPath += exportFile.getAbsolutePath() + ":";
+			exportPath += exportFile.getAbsolutePath() + System.getProperty("path.separator");
 		}
 		getLog().info("export path: " + exportPath);
 		argsList.add(exportPath);
